@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.10" tiledversion="1.11.2" name="gfx_overworld" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
- <image source="../../gfx/gfx/Overworld.png" width="640" height="576"/>
+ <image source="../../TiledResources/gfx/gfx/Overworld.png" width="640" height="576"/>
  <wangsets>
   <wangset name="Grass" type="corner" tile="-1">
    <wangcolor name="GrasswithSand" color="#ff0000" tile="-1" probability="1"/>
@@ -79,10 +79,12 @@
    <wangtile tileid="685" wangid="0,1,0,0,0,0,0,0"/>
    <wangtile tileid="686" wangid="0,0,0,0,0,0,0,1"/>
    <wangtile tileid="687" wangid="0,1,0,1,0,0,0,1"/>
+   <wangtile tileid="725" wangid="0,0,0,1,0,1,0,0"/>
    <wangtile tileid="726" wangid="0,1,0,1,0,0,0,0"/>
    <wangtile tileid="727" wangid="0,0,0,0,0,1,0,1"/>
    <wangtile tileid="763" wangid="0,1,0,1,0,0,0,1"/>
    <wangtile tileid="764" wangid="0,1,0,0,0,1,0,1"/>
+   <wangtile tileid="765" wangid="0,1,0,0,0,0,0,1"/>
   </wangset>
  </wangsets>
 </tileset>
