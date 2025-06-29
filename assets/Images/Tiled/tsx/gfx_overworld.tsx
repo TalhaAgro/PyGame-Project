@@ -4,6 +4,7 @@
  <wangsets>
   <wangset name="Grass" type="corner" tile="-1">
    <wangcolor name="GrasswithSand" color="#ff0000" tile="-1" probability="1"/>
+   <wangcolor name="GrasswithWater" color="#00ff00" tile="-1" probability="1"/>
    <wangtile tileid="120" wangid="0,0,0,1,0,0,0,0"/>
    <wangtile tileid="121" wangid="0,0,0,1,0,1,0,0"/>
    <wangtile tileid="122" wangid="0,0,0,0,0,1,0,0"/>
@@ -15,8 +16,21 @@
    <wangtile tileid="202" wangid="0,0,0,0,0,0,0,1"/>
    <wangtile tileid="240" wangid="0,1,0,0,0,1,0,1"/>
    <wangtile tileid="241" wangid="0,1,0,1,0,0,0,1"/>
+   <wangtile tileid="242" wangid="0,0,0,2,0,0,0,0"/>
+   <wangtile tileid="243" wangid="0,0,0,2,0,2,0,0"/>
+   <wangtile tileid="244" wangid="0,0,0,0,0,2,0,0"/>
    <wangtile tileid="280" wangid="0,0,0,1,0,1,0,1"/>
    <wangtile tileid="281" wangid="0,1,0,1,0,1,0,0"/>
+   <wangtile tileid="282" wangid="0,2,0,2,0,0,0,0"/>
+   <wangtile tileid="283" wangid="0,2,0,2,0,2,0,2"/>
+   <wangtile tileid="284" wangid="0,0,0,0,0,2,0,2"/>
+   <wangtile tileid="322" wangid="0,2,0,0,0,0,0,0"/>
+   <wangtile tileid="323" wangid="0,2,0,0,0,0,0,2"/>
+   <wangtile tileid="324" wangid="0,0,0,0,0,0,0,2"/>
+   <wangtile tileid="362" wangid="0,2,0,0,0,2,0,2"/>
+   <wangtile tileid="363" wangid="0,2,0,2,0,0,0,2"/>
+   <wangtile tileid="402" wangid="0,0,0,2,0,2,0,2"/>
+   <wangtile tileid="403" wangid="0,2,0,2,0,2,0,0"/>
   </wangset>
   <wangset name="Pavement" type="corner" tile="-1">
    <wangcolor name="Path3D" color="#ff0000" tile="-1" probability="1"/>
