@@ -4,4 +4,5 @@
 
 ### TODO
 
-- start coding
+- only use zelda tutorial video for now
+- at the end, improve using the stardew valley tutorial

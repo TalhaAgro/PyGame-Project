@@ -1,49 +1,38 @@
-from pygame.math import Vector2
-# screen
+from os import walk
+from csv import reader
+import pygame
+
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 TILE_SIZE = 16
+FPS=60
 
-# overlay positions 
-OVERLAY_POSITIONS = {
-	'tool' : (40, SCREEN_HEIGHT - 15), 
-	'magic': (70, SCREEN_HEIGHT - 5)}
+def import_folder(path):
+	surface_list = []
 
-PLAYER_TOOL_OFFSET = {
-	'left': Vector2(-50,40),
-	'right': Vector2(50,40),
-	'up': Vector2(0,-10),
-	'down': Vector2(0,50)
-}
+	for _, __, img_files in walk(path):
+		for image in img_files:
+			full_path = path + '/' + image
+			image_surf = pygame.image.load(full_path).convert_alpha()
+			surface_list.append(image_surf)
 
-LAYERS = {
-	'water': 0,
-	'ground': 1,
-	'rain floor': 2,
-	'house bottom': 3,
-	'ground plant': 4,
-	'main': 5,
-	'house top': 6,
-	'rain drops': 7
-}
+	return surface_list
 
-APPLE_POS = {
-	'Small': [(18,17), (30,37), (12,50), (30,45), (20,30), (30,10)],
-	'Large': [(30,24), (60,65), (50,50), (16,40),(45,50), (42,70)]
-}
+def import_folder_dict(path):
+	surface_dict = {}
 
-GROW_SPEED = {
-	'corn': 1,
-	'tomato': 0.7
-}
+	for _, __, img_files in walk(path):
+		for image in img_files:
+			full_path = path + '/' + image
+			image_surf = pygame.image.load(full_path).convert_alpha()
+			surface_dict[image.split('.')[0]] = image_surf
 
-SALE_PRICES = {
-	'wood': 4,
-	'apple': 2,
-	'corn': 10,
-	'tomato': 20
-}
-PURCHASE_PRICES = {
-	'corn': 4,
-	'tomato': 5
-}
+	return surface_dict
+
+def import_csv_layout(path):
+	terrain_map = []
+	with open(path) as level_map:
+		layout = reader(level_map,delimiter = ',')
+		for row in layout:
+			terrain_map.append(list(row))
+		return terrain_map
